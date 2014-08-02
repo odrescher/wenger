@@ -1,0 +1,145 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("div.ctbox").on("mouseenter",function() {
+			$(this).find("h2").hide();
+			$(this).find("ul").show();
+			$(this).find("img").animate({"width":'0px'},400);
+		});
+		$("div.ctbox").on("mouseleave",function() {
+			$(this).parent().find("h2").show();
+			$(this).parent().find("ul").hide();
+			$(this).find("img").animate({"width":'300px'},400);
+		});
+	});
+</script>
+<div id="cteaser" class="clearfix">
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("therapie","index",array(),"parietal")?>" title="Ich behandle Ihre Rückenschmerzen">
+			<img class="ctimg" src="/img/ruecken.png" alt="Rücken eines Geplagten"/>
+			<h2>Haben Sie <strong>Rückenschmerzen</strong>?</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>z.B. bei degenerativer Abnutzung</li>
+					<li>muskulärer Überlastung</li>
+					<li>Bandscheibenvorfall</li>
+					<li>Probleme mit der Wirbelsäule</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("therapie","index",array(),"parietal")?>" title="Ich helfe Ihnen bei Problemen mit Ihren Gelenken">
+			<img src="/img/gelenk.png" alt="Aufnahme eines Kniegelenks"/>
+			<h2><strong>Arthrose</strong>?</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>z.B. im Hüftgelenk</li>
+					<li>im Kniegelenk</li>
+					<li>im Schultergelenk</li>
+					<li>im Sprunggelenk</li>
+					<li>Gelenkblockierung</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("therapie","index",array(),"craniosacral")?>" title="Ich helfe Ihnen bei Kopfschmerzen, Nasen-Nebenhöhlen-Probleme, Tinnitus, Schwindel und mehr">
+			<img src="/img/kopfweg.png" alt="Frau mit Kopfweh"/>
+			<h2><strong>Kopfschmerzen</strong>?</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>z.B. bei Migräne</li>
+					<li>Schwindel</li>
+					<li>Heuschnupfen und Begleiterscheinungen</li>
+					<li>Nasen- und Nebenenhöhlenprobleme</li>
+					<li>Tinnitus</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("therapie","index",array(),"osteopathie")?>" title="Hilfe für Kinder & Säuglinge">
+			<img src="/img/kind.png" alt="Babymassage"/>
+			<h2>Kinder &amp; Säuglinge</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>z.B. bei Akne</li>
+					<li>hormonelle Dysregulationen in der Pupertät</li>
+					<li>Die "Koliken"</li>
+					<li>Fehlstellungen des Körpers</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("therapie","index",array(),"visceral")?>" title="Ich behandle Ihre Verdauungsprobleme">
+			<img src="/img/verdauung.png" alt="Bauch"/>
+			<h2>Probleme bei der <strong>Verdauung</strong>?</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>z.B. Reizdarm</li>
+					<li>Diarrhöe</li>
+					<li>Durchfall</li>
+					<li>Verstopfung</li>
+					<li>Abdominalbeschwerden</li>
+					<li>Chronisch entzündliche Darmerkrankungen</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("therapie","index",array(),"osteopathie")?>" title="Frauen-Beschwerden behandeln">
+			<img src="/img/frauen.png" alt="Frauenhygiene"/>
+			<h2>Frauen</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>z.B. bei Beschwerden in den Wechseljahren</li>
+					<li>Prämenstruelles Syndrom (PMS)</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("therapie","index",array(),"craniosacral")?>" title="Was tun gegen die Erschöpung?">
+			<img src="/img/burnout.png" alt="Erschöpfungszustand behandeln"/>
+			<h2>Sind Sie erschöpft?</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>z.B. hormonelle Dysfunktion</li>
+					<li>muskuläre Überlastung</li>
+					<li>"Burnout"</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("therapie","index",array(),"ostheopathie")?>" title="Was ist die Osteopathie">
+			<img src="/img/osteopathie.png" alt="Osteophatie erklärt"/>
+			<h2>Was ist <strong>Osteopathie</strong>?</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>z.B. die parietale <strong>Osteopathie</strong></li>
+					<li>die viscerale <strong>Osteopathie</strong></li>
+					<li>die cranio-sacrale <strong>Osteopathie</strong></li>
+					<li>Für wen ist <strong>Osteopathie</strong>?</li>
+					<li>Vergleich zur Schulmedizin bzw. alternativmedizinischen Therapien</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class="ctbox">
+		<a href="<?php echo $this->createLink("praxis","index")?>" title="Meine Praxisräume und die Preisliste im Überblick?">
+			<img src="/img/kosten.png" alt="Kostenerstattung"/>
+			<h2>Die Praxis</h2>
+			<div class="ctinfo">
+				<ul>
+					<li>"Verschaffen Sie sich einen bleibenden Eindruck"</li>
+					<li>Die Praxisräume</li>
+					<li>Meine Preisliste</li>
+					<li>Kostenerstattung</li>
+					<li>So finden Sie zu mir</li>
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>

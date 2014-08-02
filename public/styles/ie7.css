@@ -1,0 +1,25 @@
+div#cteaser {
+    padding: 0;
+    width: 915px;
+    margin: 50px auto 40px auto;
+}
+div#cteaser > div.ctbox {
+    float: left;
+    width: 300px;
+    height: 200px;
+    background: #fff;
+    position: relative;
+    margin: 0 5px 5px 0;
+}
+div#cteaser > div.ctbox > a > h2 {
+    color: #333;
+}
+footer#foot > div.footlinks{
+    display: inline;
+    vertical-align: top;
+    width: 60%;
+}
+footer#foot > img{
+     width: 20%;
+    text-align: right;
+ }

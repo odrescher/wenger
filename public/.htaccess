@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^xn--osteopathie-praxis-bad-tlz-zvc.de [NC]
+RewriteRule ^(.*)$ http://www.xn--osteopathie-praxis-bad-tlz-zvc.de/$1 [L,R=301]
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

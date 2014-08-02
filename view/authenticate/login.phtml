@@ -1,0 +1,21 @@
+<div id="eatLogin">
+	<h2>Bitte melden Sie sich an</h2>
+	<form action="<?php echo $this->action;?>" method="POST">
+		<?php
+			$errorClassUserField = $errorClassPwField = '';
+			if(isset($this->errors)) {
+				if(in_array('userField',$this->errors)) {
+					$errorClassUserField = 'class="fielderror" ';
+				}
+				if(in_array('pwField',$this->errors)) {
+					$errorClassPwField = 'class="fielderror" ';
+				}
+			}
+		?>
+		<label for="userField">Benutzername</label>
+		<input <?php echo $errorClassUserField ?>tabindex="10" type="text" value="<?php echo $this->values['user']?>" name="user" id="userField" placeholder="Ihr Benutzername"/>
+		<label for="pwField">Password</label>
+		<input <?php echo $errorClassPwField ?>tabindex="20" type="password" value="<?php echo $this->values['pass']?>" name="password" id="pwField" placeholder="Ihr Passwort"/>
+		<input tabindex="30" type="submit" value="Anmelden" name="submit"/>
+	</form>
+</div>

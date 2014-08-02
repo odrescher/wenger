@@ -1,0 +1,12 @@
+div#cteaser > div.ctbox > a > h2 {
+    color: #333;
+}
+footer#foot > div.footlinks{
+    display: inline;
+    vertical-align: top;
+    text-align: right;
+
+}
+footer#foot > img{
+    float: right;
+}

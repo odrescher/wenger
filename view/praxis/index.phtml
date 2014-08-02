@@ -1,0 +1,56 @@
+<div id="praxis" class="clearfix">
+	<div id="praxisdesc" class="infobx">
+		<h1 class="headerFont">Osteopathie Praxis Bad Tölz</h1>
+
+		<div class="pracon">
+			Die Praxisräume befinden sich im wunderschönen und traditionsreichen Franziskaner-Kloster.
+			Erst vor kurzem sind alle Renovierungsarbeiten beendet worden und hinterlassen bei jedem Besucher einen bleibenden Eindruck.<br/>
+			Nur 2 Minuten Fußweg entfernt lädt Sie der Franziskaner-Kurgarten zu einem entspannenden Spaziergang ein.
+		</div>
+
+		<figure>
+			<img src="/img/warteraum.png" alt="Warteraum der Osteopathie Praxis Bad Tölz"/>
+			<img src="/img/praxis.png" alt="Warteraum der Osteopathie Praxis Bad Tölz"/>
+			<img src="/img/schreibt.png" alt="Warteraum der Osteopathie Praxis Bad Tölz"/>
+			<img src="/img/liege.png" alt="Warteraum der Osteopathie Praxis Bad Tölz"/>
+		</figure>
+	</div>
+	<br/>
+	<div id="praxiskosten" class="infobx">
+		<h1 class="headerFont">Kosten</h1>
+		<div class="pracon">
+			Grundsätzlich muss eine osteopathische Behandlung vom Patienten selbst beglichen werden. Immer mehr gesetzliche wie private Krankenkassen
+			übernehmen jedoch zwischenzeitlich die Kosten anteilig. Bitte fragen Sie hier ggf. bei Ihrer Kasse nach.<br/>
+			Informationen, welche Kassen aktuell osteopathische Leistungen teilweise übernehmen finden Sie auch beim
+			<a target="_blank" href="http://www.bv-osteopathie.de/de-kostenerstattung.html" title="Anteilige Kostenerstattung von Krankenkassen">
+				Bundesverband Osteopathie Deutschland e.V.</a>
+		</div>
+		<div class="pracon">
+			Für eine osteopathische Behandlung stelle ich in Rechnung:<br/>
+			<ul style="padding: 20px 0 0 20px;">
+				<li>Bei 60 Minuten Behandlungszeit 85,- &euro;</li>
+				<li>Bei 30 Minuten Behandlungszeit 45,- &euro;</li>
+			</ul>
+		</div>
+	</div>
+	<br/>
+	<div id="anfahrt" class="infobx">
+		<h1 class="headerFont">Anfahrt</h1>
+		<div id="gmap">
+			<a class="typicons-pin" target="_blank" href="http://maps.google.com/maps?daddr=Klosterweg+2+83646 Bad+Tölz&geocode=&dirflg=&saddr=&f=d&hl=de&sll=47.759531,11.555125&sspn=&ie=UTF8&z=16" style="color:#0000FF;text-align:left">Route planen</a>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+			<div style="width:1200px;height:500px" id="gmeg_map_canvas"></div>
+			<script>
+				var gmegMap, gmegMarker, gmegInfoWindow, gmegLatLng;
+				function gmegInitializeMap(){
+					gmegLatLng = new google.maps.LatLng(47.759531,11.555125);
+					gmegMap = new google.maps.Map(document.getElementById("gmeg_map_canvas"),{zoom:16,center:gmegLatLng,mapTypeId:google.maps.MapTypeId.ROADMAP});
+					gmegMarker = new google.maps.Marker({map:gmegMap,position:gmegLatLng});
+					gmegInfoWindow = new google.maps.InfoWindow({content:'<div style="width: 270px;overflow: hidden;height: 70px;"><b>Osteopathie Praxis Bad Tölz</b><br><br>Klosterweg 2<br>83646 Bad Tölz</div>'});
+					gmegInfoWindow.open(gmegMap,gmegMarker);
+				}
+				google.maps.event.addDomListener(window,"load",gmegInitializeMap());
+			</script>
+		</div>
+	</div>
+</div>

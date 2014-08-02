@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+	<meta charset="UTF-8" />
+	<?php if(isset($this->keywords)): ?>
+		<meta name="keywords" content="<?php echo $this->keywords; ?>" />
+	<?php else: ?>
+		<meta name="keywords" content="Osteopathie,Praxis,Sportphysiotherapie,Bad Tölz,Rückenschmerzen, Kinder & Säuglinge, Arthrose, Erschöpfung" />
+	<?php endif; ?>
+	<?php if(isset($this->description)): ?>
+		<meta name="description" content="<?php echo $this->description; ?>">
+	<?php else: ?>
+		<meta name="description" content="Osteopathie - Physiotherapie in Bad Tölz. Bei Rückenschmerzen, Arthrose, Verdauungsproblemen und Erschöpfung. Für Kinder & Säuglinge, Frauen, Sportler und allen anderen.">
+	<?php endif; ?>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Monsieur+La+Doulaise&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/styles/main.css">
+	<!--[if lt IE 8]>
+		<link rel="stylesheet" type="text/css" href="/styles/ie7.css" />
+	<![endif]-->
+	<!--[if gte IE 8 & lt IE 10]>
+		<link rel="stylesheet" type="text/css" href="/styles/ie8.css" />
+	<![endif]-->
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+	<![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<?php if(isset($this->title)): ?>
+		<title><?php echo $this->title; ?></title>
+	<?php else: ?>
+		<title>Osteopathie Praxis Bad Tölz | Barbara Wenger</title>
+	<?php endif; ?>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<!--[if gte IE 9]>
+<style type="text/css">
+	.gradient {
+		filter: none;
+	}
+	.rotate {
+		filter:none;
+	}
+</style>
+<![endif]-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(window).on("scroll",function(){
+			if($(this).scrollTop() > 0) {
+				if($("div#topscroller").is(":hidden")) {
+					$("div#topscroller").show(800);
+				}
+			} else {
+				if(!$("div#topscroller").is(":hidden")) {
+					$("div#topscroller").hide(800);
+				}
+			}
+		});
+		$("div#ononesight").on("click",function(){
+			if($(this).css("width") == "25px") {
+				$(this).animate({"width":"250px"},1000,function(){
+					$(this).find("h2 > span").addClass("typicons-chevron-left");
+					$(this).find("h2 > span").removeClass("typicons-chevron-right");
+					$(this).find("h2").attr("title","Informationen ausblenden");
+					$(this).find("h3").show();
+					$(this).find("div.oosbox").show();
+				});
+			} else {
+				$(this).find("div.oosbox").hide();
+				$(this).find("h3").hide();
+				$(this).animate({"width":"25px"},1000,function() {
+					$(this).find("span").addClass("typicons-chevron-right");
+					$(this).find("span").removeClass("typicons-chevron-left");
+					$(this).find("h2").attr("title","Informationen einblenden");
+				});
+			}
+		});
+		$("span.knilcr").on("click",function() {
+			var oldHtml = $(this).html();
+			$(this).find("span").remove();
+			var val = $(this).html();
+			var l = $("<a>").attr("h"+"r"+"e"+"f",val+"@"+"g"+"m"+"a"+"i"+"l").attr("target","_blank");
+			var tmpl = l.attr("href").trim();
+			tmpl = ":" + tmpl;
+			tmpl = "o" + tmpl;
+			tmpl = "t" + tmpl;
+			tmpl = "l" + tmpl;
+			tmpl = "i" + tmpl;
+			tmpl = "a" + tmpl;
+			tmpl = "m" + tmpl;
+			tmpl += ".";
+			tmpl += "c";
+			tmpl += "o";
+			tmpl += "m";
+			location.href=tmpl;
+			$(this).html(oldHtml);
+		});
+	});
+</script>
+<header id="header">
+	<h1>Osteopathie - Integrative Körperarbeit - Sportphysiotherapie</h1>
+</header>
+<nav id="nav" class="clearfix">
+	<div class="navel<?php echo (\lib\Application::getInstance()->getRequest()->getController() == 'index') ? ' active' : "";?>">
+		<a href="<?php echo $this->getBaseUrl()?>">
+			<span class="typicons-home"></span><span>Home</span>
+		</a>
+	</div>
+	<div class="navel<?php echo (\lib\Application::getInstance()->getRequest()->getController() == 'therapie') ? ' active' : "";?>" style="width: 292px">
+		<a href="<?php echo $this->createLink("therapie","index")?>">
+			<span class="typicons-arrow-repeat"></span><span>Therapieformen</span>
+		</a>
+		<ul class="subnav">
+			<li><a href="<?php echo $this->createLink("therapie","index",array(),"ostheopathie")?>">Osteopathie erklärt</a></li>
+			<li><a href="<?php echo $this->createLink("therapie","index",array(),"craniosacral")?>">Craniosacrale Osteopathie</a></li>
+			<li><a href="<?php echo $this->createLink("therapie","index",array(),"viszeral")?>">Viszerale Osteopathie</a></li>
+			<li><a href="<?php echo $this->createLink("therapie","index",array(),"parietal")?>">Parietale Osteopathie</a></li>
+		</ul>
+	</div>
+	<div class="navel<?php echo (\lib\Application::getInstance()->getRequest()->getController() == 'praxis') ? ' active' : "";?>">
+		<a href="<?php echo $this->createLink("praxis","index")?>">
+			<span class="typicons-leaf"></span><span>Praxis</span>
+		</a>
+		<ul class="subnav">
+			<li><a href="<?php echo $this->createLink("praxis","index")?>">Praxisräume</a></li>
+			<li><a href="<?php echo $this->createLink("praxis","index",array(),"praxiskosten")?>">Kosten</a></li>
+			<li><a href="<?php echo $this->createLink("praxis","index",array(),"anfahrt")?>">Anfahrt</a></li>
+		</ul>
+	</div>
+	<div class="navel<?php echo (\lib\Application::getInstance()->getRequest()->getController() == 'uebermich') ? ' active' : "";?>">
+		<a class="last" href="<?php echo $this->createLink("uebermich","index")?>" title="Erfahren Sie mehr über mich">
+			<span class="typicons-user"></span><span>Über Mich</span>
+		</a>
+	</div>
+</nav>
+<div id="content" class="gradientdowntop">
+	<?php include $this->content; ?>
+</div>
+<footer id="foot" class="clearfix gradient">
+	<img src="/img/footl.png" alt="Blume weiß">
+	<div class="footlinks">
+		<a href="<?php echo $this->createLink("index","impressum",array(),"impressum")?>">Impressum</a>
+		<a href="<?php echo $this->createLink("index","impressum",array(),"kontakt")?>">Kontakt</a>
+		<a href="<?php echo $this->createLink("index","impressum",array(),"bildnachweis")?>">Bildnachweis</a>
+	</div>
+	<div class="bildnachweis">Hintergrundbild von: Thomas Grünsch / <a href="http://www.pixelio.de" target="_blank">pixelio.de</a><a href="https://plus.google.com/100838432698141378303" rel="publisher">Google+</a></div>
+	<img src="/img/footr.png" alt="Blume weiß">
+</footer>
+<div id="topscroller">
+	<a href="#header"><span class="typicons-arrow-up"></span>Top</a>
+</div>
+<div id="ononesight">
+	<h2 title="Informationen einblenden"><span class="typicons-chevron-right"></span></h2>
+	<h3>Alles auf einen Blick</h3>
+	<div class="oosbox">
+		<p>Termine nach Vereinbarung!</p>
+	</div>
+	<div class="oosbox">
+		<p>Nur Privatkasse oder Selbstzahler!</p>
+	</div>
+	<div class="oosbox">
+		<p>
+			Kontakt:<br/>
+			<span itemprop="telephone" class="typicons-phone"> 0176/821 945 63</span><br/>
+			<span class="typicons-mail knilcr"> bawosteo2<span class="attit"></span><span class="tsohgm"></span></span>
+		</p>
+	</div>
+	<div class="oosbox">
+		<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.osteopathie-praxis-bad-tölz.de&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;"
+			style="scrolling:no;frameborder:0;allowTransparency:true;border:none; overflow:hidden; width:108px; display: inline;float: left;position: relative; top:3px;"></iframe>
+		<!-- Place this tag where you want the +1 button to render. -->
+		<div class="g-plusone" data-size="medium" data-href="http://www.osteopathie-praxis-bad-tölz.de"></div>
+
+		<!-- Place this tag after the last +1 button tag. -->
+		<script type="text/javascript">
+			window.___gcfg = {lang: 'de'};
+
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+		</script>
+	</div>
+</div>
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42644675-1', 'osteopathie-praxis-bad-tölz.de');
+	ga('send', 'pageview');
+
+</script>
+</body>
+</html>
