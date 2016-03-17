@@ -518,7 +518,9 @@ span.knilcr {
 }
 span.attit:before {
     content: "@";
+    font-weight: bold;
 }
 span.tsohgm:before {
     content: "web.de";
+    font-weight: bold;
 }
