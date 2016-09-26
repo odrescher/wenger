@@ -57,18 +57,17 @@
 		});
 		$("div#ononesight").on("click", function(){
 			if ($(this).find("div.oosbox").is(":hidden")) {
-//				$(this).animate({"width":"250px"}, 1000, function(){
-//
-//				});
-                $(this).find("h2 > span").addClass("typicons-chevron-left");
-                $(this).find("h2 > span").removeClass("typicons-chevron-right");
-                $(this).find("h2").attr("title","Informationen ausblenden");
                 $(this).find("h3").show();
                 $(this).find("div.oosbox").show();
+				$(this).animate({"width":"250px"}, 600, function(){
+                    $(this).find("h2 > span").addClass("typicons-chevron-left");
+                    $(this).find("h2 > span").removeClass("typicons-chevron-right");
+                    $(this).find("h2").attr("title","Informationen ausblenden");
+				});
 			} else {
 				$(this).find("div.oosbox").hide();
 				$(this).find("h3").hide();
-				$(this).animate({"width":"25px"},1000,function() {
+				$(this).animate({"width":"25px"}, 600, function() {
 					$(this).find("span").addClass("typicons-chevron-right");
 					$(this).find("span").removeClass("typicons-chevron-left");
 					$(this).find("h2").attr("title","Informationen einblenden");
