@@ -381,6 +381,11 @@ div#therapie p {
     border-radius: 5px;
 }
 
+div.infobx > h2 {
+    font-size: 18px;
+    padding: 10px;
+}
+
 /* Footer */
 footer#foot {
     width: 100%;
